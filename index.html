@@ -3,26 +3,29 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Aahar — Find Your Next Favorite Thing</title>
-<meta name="description" content="Aahar — a modern online store for fashion, electronics, home and accessories." />
+<title>Aahar Rice World — More Than A Supermarket</title>
+<meta name="description" content="Aahar Rice World — premium rice, pulses, spices, oils and everyday grocery essentials delivered to your door." />
 
 <style>
 /* ============================================================
    1. DESIGN TOKENS & RESET
    ============================================================ */
 :root {
-  --primary: #6c5ce7;
-  --primary-dark: #5a4bd1;
-  --primary-light: #a29bfe;
-  --bg: #f5f6fa;
+  /* Brand palette taken from the Aahar Rice World logo */
+  --primary: #a32020;        /* deep logo red */
+  --primary-dark: #7e1414;   /* darker red for hover */
+  --gold: #e5b84b;           /* logo gold border */
+  --gold-soft: #fdf3dd;      /* pale gold tint */
+  --green: #5a8f3c;          /* paddy-field green */
+  --bg: #faf7f2;             /* warm off-white background */
   --white: #ffffff;
   --text: #2d3436;
   --muted: #7f8c9b;
-  --border: #e3e6ef;
-  --dark: #16132b;
+  --border: #ebe3d6;
+  --dark: #2b1210;           /* deep brown-red for footer */
   --radius: 16px;
-  --shadow: 0 4px 20px rgba(45, 52, 54, 0.08);
-  --shadow-hover: 0 14px 34px rgba(108, 92, 231, 0.20);
+  --shadow: 0 4px 20px rgba(43, 18, 16, 0.08);
+  --shadow-hover: 0 14px 34px rgba(163, 32, 32, 0.20);
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -115,13 +118,13 @@ textarea {
 .btn-primary {
   background: var(--primary);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(108, 92, 231, 0.35);
+  box-shadow: 0 6px 18px rgba(163, 32, 32, 0.32);
 }
 
 .btn-primary:hover {
   background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(108, 92, 231, 0.45);
+  box-shadow: 0 10px 26px rgba(163, 32, 32, 0.42);
 }
 
 .btn-primary:active {
@@ -135,8 +138,8 @@ textarea {
 }
 
 .btn-ghost:hover {
-  border-color: var(--primary-light);
-  background: #f7f6ff;
+  border-color: var(--gold);
+  background: var(--gold-soft);
 }
 
 .btn-block {
@@ -150,42 +153,35 @@ textarea {
   position: sticky;
   top: 0;
   z-index: 200;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(45, 52, 54, 0.07);
+  border-bottom: 1px solid rgba(163, 32, 32, 0.08);
 }
 
 .nav-inner {
-  height: 72px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
 }
 
-/* Logo (image-based) */
+/* Logo (badge image from the Aahar Rice World brand) */
 .logo {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: -0.6px;
-  color: var(--primary);
   text-decoration: none;
   white-space: nowrap;
 }
 
-.logo span {
-  color: var(--text);
-}
-
 .logo-img {
-  height: 40px;
+  height: 58px;
   width: auto;
   display: block;
   object-fit: contain;
+  border-radius: 8px;
 }
 
 .nav-links {
@@ -242,7 +238,7 @@ textarea {
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
-  box-shadow: 0 5px 16px rgba(108, 92, 231, 0.35);
+  box-shadow: 0 5px 16px rgba(163, 32, 32, 0.32);
   transition: transform 0.25s var(--ease), background 0.25s var(--ease);
 }
 
@@ -283,7 +279,7 @@ textarea {
 }
 
 .menu-btn:hover {
-  background: #f0f0f7;
+  background: var(--gold-soft);
 }
 
 /* ============================================================
@@ -303,7 +299,7 @@ textarea {
   width: 480px;
   height: 480px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(162, 155, 254, 0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(229, 184, 75, 0.35), transparent 70%);
   pointer-events: none;
 }
 
@@ -319,7 +315,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #edeaff;
+  background: var(--gold-soft);
   color: var(--primary);
   font-size: 0.8rem;
   font-weight: 700;
@@ -386,11 +382,11 @@ textarea {
   width: min(340px, 74vw);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  background: linear-gradient(135deg, var(--gold), var(--primary));
   display: grid;
   place-items: center;
   font-size: clamp(4.5rem, 12vw, 8rem);
-  box-shadow: 0 30px 60px rgba(108, 92, 231, 0.35);
+  box-shadow: 0 30px 60px rgba(163, 32, 32, 0.35);
   animation: float 5s ease-in-out infinite;
 }
 
@@ -402,7 +398,7 @@ textarea {
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--text);
-  box-shadow: 0 10px 26px rgba(45, 52, 54, 0.14);
+  box-shadow: 0 10px 26px rgba(43, 18, 16, 0.14);
   white-space: nowrap;
 }
 
@@ -439,7 +435,7 @@ textarea {
 }
 
 .chip:hover {
-  border-color: var(--primary-light);
+  border-color: var(--gold);
   color: var(--primary);
   transform: translateY(-2px);
 }
@@ -448,7 +444,7 @@ textarea {
   background: var(--primary);
   border-color: var(--primary);
   color: #fff;
-  box-shadow: 0 6px 16px rgba(108, 92, 231, 0.32);
+  box-shadow: 0 6px 16px rgba(163, 32, 32, 0.32);
 }
 
 .toolbar {
@@ -488,7 +484,7 @@ textarea {
 
 .search-box input:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.12);
+  box-shadow: 0 0 0 4px rgba(163, 32, 32, 0.12);
 }
 
 .sort-box {
@@ -512,7 +508,7 @@ textarea {
 
 .sort-box select:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.12);
+  box-shadow: 0 0 0 4px rgba(163, 32, 32, 0.12);
 }
 
 .sort-box::after {
@@ -584,7 +580,7 @@ textarea {
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: var(--primary);
-  background: #edeaff;
+  background: var(--gold-soft);
   padding: 4px 10px;
   border-radius: 999px;
 }
@@ -688,18 +684,18 @@ textarea {
 }
 
 .newsletter-inner {
-  background: linear-gradient(135deg, var(--primary), #8e7bff);
+  background: linear-gradient(135deg, var(--primary), #c0392b);
   border-radius: 26px;
   padding: 54px 40px;
   text-align: center;
   color: #fff;
-  box-shadow: 0 24px 50px rgba(108, 92, 231, 0.32);
+  box-shadow: 0 24px 50px rgba(163, 32, 32, 0.32);
   position: relative;
   overflow: hidden;
 }
 
 .newsletter-inner::after {
-  content: "🎁";
+  content: "🌾";
   position: absolute;
   right: -10px;
   bottom: -30px;
@@ -744,7 +740,7 @@ textarea {
 }
 
 .newsletter-form input:focus {
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 4px rgba(229, 184, 75, 0.45);
 }
 
 .newsletter-form button {
@@ -774,7 +770,7 @@ textarea {
    ============================================================ */
 .footer {
   background: var(--dark);
-  color: #b9b5d4;
+  color: #c9b8b3;
   padding: 56px 0 26px;
 }
 
@@ -787,18 +783,18 @@ textarea {
 }
 
 .footer .logo {
-  color: #fff;
   display: inline-flex;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
-.footer .logo span {
-  color: var(--primary-light);
+.footer .logo-img {
+  height: 64px;
+  border-radius: 8px;
 }
 
 .footer-about p {
   font-size: 0.88rem;
-  max-width: 330px;
+  max-width: 340px;
   line-height: 1.7;
 }
 
@@ -817,14 +813,14 @@ textarea {
 }
 
 .footer-links a {
-  color: #b9b5d4;
+  color: #c9b8b3;
   text-decoration: none;
   font-size: 0.88rem;
   transition: color 0.2s var(--ease), padding-left 0.2s var(--ease);
 }
 
 .footer-links a:hover {
-  color: #fff;
+  color: var(--gold);
   padding-left: 4px;
 }
 
@@ -835,7 +831,7 @@ textarea {
   justify-content: space-between;
   gap: 10px;
   font-size: 0.82rem;
-  color: #8c88a8;
+  color: #9c8880;
 }
 
 /* ============================================================
@@ -844,7 +840,7 @@ textarea {
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(20, 18, 40, 0.5);
+  background: rgba(43, 18, 16, 0.5);
   backdrop-filter: blur(2px);
   opacity: 0;
   visibility: hidden;
@@ -891,7 +887,7 @@ textarea {
 }
 
 .icon-btn {
-  background: #f2f2f8;
+  background: #f6f2ec;
   border: none;
   width: 34px;
   height: 34px;
@@ -905,7 +901,7 @@ textarea {
 }
 
 .icon-btn:hover {
-  background: #e6e6f2;
+  background: #ece4d8;
   color: var(--text);
 }
 
@@ -923,7 +919,7 @@ textarea {
   gap: 14px;
   align-items: flex-start;
   padding-bottom: 16px;
-  border-bottom: 1px solid #f1f1f7;
+  border-bottom: 1px solid #f5f0e8;
   animation: fadeUp 0.3s var(--ease) both;
 }
 
@@ -968,7 +964,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 2px;
-  background: #f2f2f8;
+  background: #f6f2ec;
   border-radius: 999px;
   padding: 3px;
 }
@@ -1013,7 +1009,7 @@ textarea {
 .ci-remove {
   background: none;
   border: none;
-  color: #b7bcc7;
+  color: #c3b8ae;
   font-size: 0.85rem;
   cursor: pointer;
   padding: 2px 4px;
@@ -1057,7 +1053,7 @@ textarea {
 .cart-footer {
   padding: 20px 24px 24px;
   border-top: 1px solid var(--border);
-  background: #fbfbff;
+  background: #fdfbf7;
 }
 
 .cart-total {
@@ -1090,7 +1086,7 @@ textarea {
   display: grid;
   place-items: center;
   padding: 20px;
-  background: rgba(20, 18, 40, 0.55);
+  background: rgba(43, 18, 16, 0.55);
   backdrop-filter: blur(3px);
   opacity: 0;
   visibility: hidden;
@@ -1157,7 +1153,7 @@ textarea {
   padding: 12px 15px;
   border-radius: 13px;
   border: 1.5px solid var(--border);
-  background: #fafbff;
+  background: #fdfbf7;
   font-size: 0.92rem;
   outline: none;
   resize: vertical;
@@ -1169,7 +1165,7 @@ textarea {
 .field textarea:focus {
   border-color: var(--primary);
   background: #fff;
-  box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.12);
+  box-shadow: 0 0 0 4px rgba(163, 32, 32, 0.12);
 }
 
 .order-success {
@@ -1182,8 +1178,8 @@ textarea {
   height: 76px;
   margin: 0 auto 20px;
   border-radius: 50%;
-  background: #e9f9ef;
-  color: #22a45d;
+  background: #eaf6e6;
+  color: var(--green);
   display: grid;
   place-items: center;
   font-size: 2.2rem;
@@ -1272,7 +1268,7 @@ textarea {
 
   .nav-links {
     position: absolute;
-    top: 72px;
+    top: 76px;
     left: 0;
     right: 0;
     background: #fff;
@@ -1280,7 +1276,7 @@ textarea {
     align-items: stretch;
     gap: 0;
     padding: 8px 20px 18px;
-    box-shadow: 0 22px 34px rgba(45, 52, 54, 0.12);
+    box-shadow: 0 22px 34px rgba(43, 18, 16, 0.12);
     display: none;
     border-bottom: 1px solid var(--border);
   }
@@ -1291,7 +1287,7 @@ textarea {
 
   .nav-links a {
     padding: 13px 0;
-    border-bottom: 1px solid #f2f2f8;
+    border-bottom: 1px solid #f5f0e8;
   }
 
   .nav-links a::after {
@@ -1310,19 +1306,19 @@ textarea {
 
 @media (max-width: 560px) {
   .nav-inner {
-    height: 66px;
+    height: 68px;
   }
 
   .nav-links {
-    top: 66px;
-  }
-
-  .logo {
-    font-size: 1.2rem;
+    top: 68px;
   }
 
   .logo-img {
-    height: 32px;
+    height: 46px;
+  }
+
+  .footer .logo-img {
+    height: 54px;
   }
 
   .cart-btn {
@@ -1406,8 +1402,8 @@ textarea {
      ============================================================ -->
 <header class="navbar">
   <div class="container nav-inner">
-    <a href="#home" class="logo">
-      <img src="aahar.jpeg" alt="Aahar" class="logo-img" />
+    <a href="#home" class="logo" aria-label="Aahar Rice World — home">
+      <img src="aahar.jpeg" alt="Aahar Rice World" class="logo-img" />
     </a>
 
     <nav class="nav-links" id="navLinks" aria-label="Main navigation">
@@ -1436,12 +1432,12 @@ textarea {
   <section class="hero" id="home">
     <div class="container hero-inner">
       <div class="hero-text">
-        <span class="hero-badge">✨ New arrivals every week</span>
-        <h1>Find Your Next <em>Favorite Thing.</em></h1>
+        <span class="hero-badge">🌾 Fresh stock every week</span>
+        <h1>More Than A <em>Supermarket.</em></h1>
         <p>
-          Discover curated fashion, cutting-edge electronics, and everyday
-          essentials — all in one place. Quality products, honest prices, and
-          delivery right to your door.
+          From premium rice and pulses to aromatic spices, pure oils and
+          everyday essentials — everything your kitchen needs, delivered fresh
+          to your door at honest prices.
         </p>
 
         <div class="hero-cta">
@@ -1450,17 +1446,17 @@ textarea {
         </div>
 
         <div class="hero-stats">
-          <div><strong>8+</strong><small>Curated products</small></div>
-          <div><strong>4.8★</strong><small>Average rating</small></div>
-          <div><strong>Free</strong><small>Shipping over ₹2,000</small></div>
+          <div><strong>12+</strong><small>Quality products</small></div>
+          <div><strong>4.9★</strong><small>Customer rating</small></div>
+          <div><strong>₹500+</strong><small>Free home delivery</small></div>
         </div>
       </div>
 
       <div class="hero-art" aria-hidden="true">
-        <div class="blob">🛍️</div>
-        <span class="float-chip chip-1">🎧 Audio</span>
-        <span class="float-chip chip-2">👟 Fashion</span>
-        <span class="float-chip chip-3">⚡ Fast Delivery</span>
+        <div class="blob">🌾</div>
+        <span class="float-chip chip-1">🍚 Premium Rice</span>
+        <span class="float-chip chip-2">🌶️ Fresh Spices</span>
+        <span class="float-chip chip-3">🚚 Fast Delivery</span>
       </div>
     </div>
   </section>
@@ -1472,17 +1468,19 @@ textarea {
     <div class="container">
 
       <div class="section-head">
-        <h2>Shop Our Collection</h2>
-        <p>Handpicked favorites across fashion, electronics, home and accessories.</p>
+        <h2>Everything Your Kitchen Needs</h2>
+        <p>Premium rice, pulses, spices, oils and daily essentials — all in one basket.</p>
       </div>
 
       <!-- Category filters -->
       <div class="chips" id="categories" role="group" aria-label="Filter by category">
         <button class="chip active" data-category="All">All Products</button>
-        <button class="chip" data-category="Fashion">Fashion</button>
-        <button class="chip" data-category="Electronics">Electronics</button>
-        <button class="chip" data-category="Home">Home</button>
-        <button class="chip" data-category="Accessories">Accessories</button>
+        <button class="chip" data-category="Rice &amp; Grains">Rice &amp; Grains</button>
+        <button class="chip" data-category="Pulses &amp; Dal">Pulses &amp; Dal</button>
+        <button class="chip" data-category="Oils &amp; Ghee">Oils &amp; Ghee</button>
+        <button class="chip" data-category="Spices">Spices</button>
+        <button class="chip" data-category="Groceries">Groceries</button>
+        <button class="chip" data-category="Beverages">Beverages</button>
       </div>
 
       <!-- Search + sort toolbar -->
@@ -1495,7 +1493,7 @@ textarea {
           <input
             type="search"
             id="searchInput"
-            placeholder="Search products by name..."
+            placeholder="Search rice, dal, spices..."
             autocomplete="off"
           />
         </div>
@@ -1532,30 +1530,30 @@ textarea {
   <section class="section" id="about" style="padding-top:0">
     <div class="container">
       <div class="section-head">
-        <h2>Why Shop With Shoply?</h2>
-        <p>We keep shopping simple, honest, and enjoyable.</p>
+        <h2>Why Shop With Aahar Rice World?</h2>
+        <p>We keep your kitchen stocked with quality you can trust.</p>
       </div>
 
       <div class="about-grid">
         <article class="about-card">
-          <div class="icon">🚚</div>
-          <h3>Fast, Free Delivery</h3>
-          <p>Free shipping on all orders above ₹2,000, delivered in 2–4 days.</p>
+          <div class="icon">🌾</div>
+          <h3>Farm-Fresh Quality</h3>
+          <p>Sourced directly from trusted mills and farms for maximum freshness.</p>
         </article>
         <article class="about-card">
           <div class="icon">🛡️</div>
-          <h3>Secure Shopping</h3>
-          <p>Your details stay private. Every checkout is protected and safe.</p>
+          <h3>Pure &amp; Trusted</h3>
+          <p>No adulteration, honest weights, and quality you can rely on every time.</p>
         </article>
         <article class="about-card">
-          <div class="icon">↩️</div>
-          <h3>Easy Returns</h3>
-          <p>Changed your mind? Enjoy a hassle-free 30-day return window.</p>
+          <div class="icon">🚚</div>
+          <h3>Fast Home Delivery</h3>
+          <p>Free delivery on orders above ₹500, straight to your door in 24–48 hours.</p>
         </article>
         <article class="about-card">
-          <div class="icon">💬</div>
-          <h3>Real Support</h3>
-          <p>Our team is available 7 days a week to help you with anything.</p>
+          <div class="icon">💰</div>
+          <h3>Honest Prices</h3>
+          <p>Direct sourcing means better prices on every grain, every single day.</p>
         </article>
       </div>
     </div>
@@ -1568,7 +1566,7 @@ textarea {
     <div class="container">
       <div class="newsletter-inner">
         <h2>Get 10% Off Your First Order.</h2>
-        <p>Join the Shoply newsletter for exclusive drops, deals and early access.</p>
+        <p>Join the Aahar Rice World newsletter for seasonal offers, new stock alerts and early access.</p>
 
         <form class="newsletter-form" id="newsletterForm" novalidate>
           <label for="newsletterEmail" style="position:absolute;left:-9999px">
@@ -1599,13 +1597,13 @@ textarea {
   <div class="container">
     <div class="footer-top">
       <div class="footer-about">
-        <a href="#home" class="logo">
-          <img src="aahar.jpeg" alt="Aahar" class="logo-img" />
+        <a href="#home" class="logo" aria-label="Aahar Rice World — home">
+          <img src="aahar.jpeg" alt="Aahar Rice World" class="logo-img" />
         </a>
         <p>
-          Aahar is a modern online store bringing you fashion, electronics and
-          everyday essentials — carefully selected, fairly priced, and delivered
-          with care.
+          Aahar Rice World is your neighbourhood supermarket — bringing you
+          premium rice, pulses, spices, oils and everyday essentials at honest
+          prices, delivered with care.
         </p>
       </div>
 
@@ -1614,7 +1612,7 @@ textarea {
         <ul class="footer-links">
           <li><a href="#shop">All Products</a></li>
           <li><a href="#categories">Categories</a></li>
-          <li><a href="#shop">New Arrivals</a></li>
+          <li><a href="#shop">Rice &amp; Grains</a></li>
           <li><a href="#shop">Best Sellers</a></li>
         </ul>
       </div>
@@ -1631,8 +1629,8 @@ textarea {
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Shoply. All rights reserved.</span>
-      <span>Made with 💜 for modern shoppers.</span>
+      <span>© 2026 Aahar Rice World. All rights reserved.</span>
+      <span>Made with 🌾 for every kitchen.</span>
     </div>
   </div>
 </footer>
@@ -1644,7 +1642,7 @@ textarea {
 
 <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart" aria-hidden="true">
   <div class="cart-header">
-    <h2>Your Cart</h2>
+    <h2>Your Basket</h2>
     <button class="icon-btn" id="closeCartBtn" aria-label="Close cart">✕</button>
   </div>
 
@@ -1714,80 +1712,116 @@ textarea {
 
 <script>
 /* ============================================================
-   1. PRODUCT DATA (vanilla JS array — no backend needed)
+   1. PRODUCT DATA — Aahar Rice World grocery catalogue
    ============================================================ */
 const PRODUCTS = [
   {
     id: 1,
-    name: "Classic Sneakers",
-    desc: "Comfortable everyday sneakers with a timeless silhouette.",
-    price: 2499,
-    category: "Fashion",
-    emoji: "👟",
-    bg: "linear-gradient(135deg, #e8e4ff, #cfc7ff)"
+    name: "Premium Basmati Rice",
+    desc: "Long-grain aged basmati with a rich aroma. Perfect for biryani and pulao.",
+    price: 899,
+    category: "Rice & Grains",
+    emoji: "🍚",
+    bg: "linear-gradient(135deg, #fff6e0, #ffe8b8)"
   },
   {
     id: 2,
-    name: "Urban Hoodie",
-    desc: "Soft fleece hoodie built for relaxed city days and cool evenings.",
-    price: 1799,
-    category: "Fashion",
-    emoji: "🧥",
-    bg: "linear-gradient(135deg, #ffe8e0, #ffd0c2)"
+    name: "Sona Masoori Rice",
+    desc: "Light, everyday rice loved across South India. 10 kg family pack.",
+    price: 1199,
+    category: "Rice & Grains",
+    emoji: "🌾",
+    bg: "linear-gradient(135deg, #fdf0da, #f5dfb5)"
   },
   {
     id: 3,
-    name: "Wireless Headphones",
-    desc: "Immersive sound with active noise cancellation and 30h battery.",
-    price: 3499,
-    category: "Electronics",
-    emoji: "🎧",
-    bg: "linear-gradient(135deg, #e0f0ff, #c2e0ff)"
+    name: "Organic Brown Rice",
+    desc: "Wholesome unpolished brown rice, high in fibre and nutrients. 2 kg.",
+    price: 349,
+    category: "Rice & Grains",
+    emoji: "🍙",
+    bg: "linear-gradient(135deg, #f0e4d4, #dcc7a8)"
   },
   {
     id: 4,
-    name: "Smart Watch",
-    desc: "Track fitness, calls and notifications right from your wrist.",
-    price: 4299,
-    category: "Electronics",
-    emoji: "⌚",
-    bg: "linear-gradient(135deg, #e2fbf0, #c0f2df)"
+    name: "Toor Dal",
+    desc: "Hand-picked premium toor dal, cooks soft and tastes rich. 1 kg.",
+    price: 189,
+    category: "Pulses & Dal",
+    emoji: "🥣",
+    bg: "linear-gradient(135deg, #fff3d6, #ffe0a8)"
   },
   {
     id: 5,
-    name: "Minimal Desk Lamp",
-    desc: "Warm, adjustable lighting with a clean Scandinavian design.",
-    price: 1299,
-    category: "Home",
-    emoji: "💡",
-    bg: "linear-gradient(135deg, #fff5da, #ffe9b0)"
+    name: "Moong Dal",
+    desc: "Bright yellow split moong dal — light on the stomach, quick to cook. 1 kg.",
+    price: 159,
+    category: "Pulses & Dal",
+    emoji: "🫘",
+    bg: "linear-gradient(135deg, #f2f7dc, #ddeab0)"
   },
   {
     id: 6,
-    name: "Ceramic Coffee Mug",
-    desc: "Handcrafted 350ml mug that keeps your coffee warm for longer.",
-    price: 599,
-    category: "Home",
-    emoji: "☕",
-    bg: "linear-gradient(135deg, #fde8e8, #f8cccc)"
+    name: "Chana Dal",
+    desc: "Nutty Bengal gram split dal, ideal for sambar and everyday curries. 1 kg.",
+    price: 139,
+    category: "Pulses & Dal",
+    emoji: "🫘",
+    bg: "linear-gradient(135deg, #fbf0d2, #efdca0)"
   },
   {
     id: 7,
-    name: "Classic Backpack",
-    desc: "Water-resistant 25L backpack with padded laptop compartment.",
-    price: 1999,
-    category: "Accessories",
-    emoji: "🎒",
-    bg: "linear-gradient(135deg, #e6e9f5, #ccd3ea)"
+    name: "Sunflower Oil",
+    desc: "Light, refined sunflower oil for everyday cooking. 1 litre bottle.",
+    price: 149,
+    category: "Oils & Ghee",
+    emoji: "🧴",
+    bg: "linear-gradient(135deg, #fff8d9, #ffeea0)"
   },
   {
     id: 8,
-    name: "Leather Wallet",
-    desc: "Slim genuine-leather wallet with RFID protection and 8 slots.",
-    price: 999,
-    category: "Accessories",
-    emoji: "👛",
-    bg: "linear-gradient(135deg, #f3e6da, #e3cbb4)"
+    name: "Pure Cow Ghee",
+    desc: "Slow-churned aromatic cow ghee with a rich, authentic flavour. 500 ml.",
+    price: 499,
+    category: "Oils & Ghee",
+    emoji: "🧈",
+    bg: "linear-gradient(135deg, #fff4cc, #ffe49a)"
+  },
+  {
+    id: 9,
+    name: "Turmeric Powder",
+    desc: "Bright, high-curcumin turmeric ground from premium fingers. 250 g.",
+    price: 99,
+    category: "Spices",
+    emoji: "🟡",
+    bg: "linear-gradient(135deg, #fff6d6, #ffe9a0)"
+  },
+  {
+    id: 10,
+    name: "Red Chilli Powder",
+    desc: "Vibrant, well-balanced chilli powder with a clean heat. 250 g.",
+    price: 129,
+    category: "Spices",
+    emoji: "🌶️",
+    bg: "linear-gradient(135deg, #ffe3dc, #ffc4b4)"
+  },
+  {
+    id: 11,
+    name: "Whole Wheat Atta",
+    desc: "Stone-ground chakki atta for soft, fluffy rotis every time. 5 kg.",
+    price: 279,
+    category: "Groceries",
+    emoji: "🌾",
+    bg: "linear-gradient(135deg, #f6e9d5, #e4cfa8)"
+  },
+  {
+    id: 12,
+    name: "Assam Tea Powder",
+    desc: "Strong, malty Assam leaf tea — a perfect cup any time of day. 500 g.",
+    price: 249,
+    category: "Beverages",
+    emoji: "🍵",
+    bg: "linear-gradient(135deg, #efe0d0, #d9bfa3)"
   }
 ];
 
@@ -1886,7 +1920,7 @@ function productCardHTML(product) {
         <div class="product-foot">
           <span class="price">${formatPrice(product.price)}</span>
           <button class="btn btn-primary add-btn" data-id="${product.id}"
-                  aria-label="Add ${product.name} to cart">
+                  aria-label="Add ${product.name} to basket">
             Add to Cart
           </button>
         </div>
@@ -1951,7 +1985,7 @@ function addToCart(id) {
   bumpCartBadge();
 
   const product = getProduct(id);
-  showToast(`${product.emoji} ${product.name} added to cart`);
+  showToast(`${product.emoji} ${product.name} added to basket`);
 }
 
 /** Change the quantity of a cart item by `delta`; removes it at 0 */
@@ -1973,7 +2007,7 @@ function removeFromCart(id) {
   const product = getProduct(id);
   state.cart = state.cart.filter((entry) => entry.id !== id);
   renderCart();
-  showToast(`${product.name} removed from cart`);
+  showToast(`${product.name} removed from basket`);
 }
 
 /** Build markup for one cart line item */
@@ -2001,7 +2035,7 @@ function cartItemHTML(item) {
 
       <div class="ci-end">
         <button class="ci-remove" data-action="remove" data-id="${product.id}"
-                aria-label="Remove ${product.name} from cart">✕</button>
+                aria-label="Remove ${product.name} from basket">✕</button>
         <span class="ci-subtotal">${formatPrice(subtotal)}</span>
       </div>
     </div>
@@ -2023,7 +2057,7 @@ function renderCart() {
     cartItems.innerHTML = `
       <div class="cart-empty">
         <span>🛒</span>
-        <p>Your cart is empty</p>
+        <p>Your basket is empty</p>
         <small>Add some products to get started.</small>
       </div>
     `;
