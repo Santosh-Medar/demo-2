@@ -1380,6 +1380,18 @@ textarea {
   html {
     scroll-behavior: auto;
   }
+   .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
 }
 </style>
 </head>
@@ -1391,7 +1403,9 @@ textarea {
      ============================================================ -->
 <header class="navbar">
   <div class="container nav-inner">
-    <a href="#home" class="logo">🛍️ Aahar<span>.</span></a>
+    <a href="#home" class="logo">
+     <img src="aahar.jpeg" alt="Aahar" class="logo-img" />
+   </a>
 
     <nav class="nav-links" id="navLinks" aria-label="Main navigation">
       <a href="#home">Home</a>
@@ -1582,7 +1596,9 @@ textarea {
   <div class="container">
     <div class="footer-top">
       <div class="footer-about">
-        <a href="#home" class="logo">🛍️ Aahar<span>.</span></a>
+        <a href="#home" class="logo">
+           <img src="aahar.jpeg" alt="Aahar" class="logo-img" />
+         </a>
         <p>
           Aahar is a modern online store bringing you fashion, electronics and
           everyday essentials — carefully selected, fairly priced, and delivered
